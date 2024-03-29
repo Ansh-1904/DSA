@@ -20,7 +20,7 @@ class pascalsTraingle {
 
     public static void printEntireRow(int n)
     {
-        for(int c=1;c<n;c++)
+        for(int c=1;c<=n;c++)
         {
             System.out.print(cal_NCR(n-1,c-1)+" ");
         }
