@@ -1,3 +1,4 @@
+//majority elemenet >n/2
 import java.util.*;
 public class maxfreq {
 
@@ -10,7 +11,10 @@ public class maxfreq {
 			{
 				map.put(arr[i], map.get(arr[i])+1);
 			}
-			map.put(arr[i], 1);
+			else{
+				map.put(arr[i], 1);
+			}
+			
 		}
 		int max=0;
 		int ans=Integer.MIN_VALUE;
@@ -27,7 +31,7 @@ public class maxfreq {
 
     public static void main(String args[])
     {
-        int arr[]={2,12,2,11,12,2,1,2,2,11,12,2,6};
+        int arr[]={2 ,2, 1, 3, 1, 1, 3, 1, 1};
         int smallAns=maxFrequencyNumber(arr);
         System.out.print(smallAns);
         
