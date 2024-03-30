@@ -2,7 +2,7 @@
 
 import java.util.ArrayList;
 
-public class removeConsecativeDup {
+class removeConsecativeDup {
     public static ArrayList<Integer> duplicates(int arr[])
     {
         ArrayList<Integer> result=new ArrayList<>();
