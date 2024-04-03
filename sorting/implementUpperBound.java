@@ -6,14 +6,13 @@ public class implementUpperBound {
         while(low<=high)
         {
             int mid=(low+high)/2;
-            if(arr[mid]<=x)
+            if(arr[mid]>x)
             {
-                
-                low=mid+1;
-            }
-            else{
                 ans=mid;
                 high=mid-1;
+            }
+            else{
+                low=mid+1;
             }
         }
         return ans;

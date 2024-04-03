@@ -24,7 +24,7 @@ public class implementLowerBound {
 
     public static void main(String[] args) {
         int[] arr = {3, 5, 8, 15, 19};
-        int n = 5, x = 9;
+        int n = 5, x = 8;//x=9
         int ind = lowerBound(arr, n, x);
         System.out.println("The lower bound is the index: " + ind);
     }
