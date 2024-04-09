@@ -13,7 +13,6 @@ class FindMinInRotatingSortedArray {
                 high = mid;
             }
         }
-
         return nums[low];
     }
     
