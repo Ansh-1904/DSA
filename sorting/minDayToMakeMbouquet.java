@@ -45,10 +45,11 @@ class minDayToMakeMbouquet {
     }
 
     public static void main(String[] args) {
-        int[] arr = {7, 7, 7, 7, 13, 11, 12, 7};
+        // int[] arr = {7, 7, 7, 7, 13, 11, 12, 7};
+        int[] arr = {1 ,2 ,1 ,2 ,7 ,2 ,2 ,3 ,1};
         int k = 3;
         int m = 2;
-        int ans = minDays(arr, k, m);
+        int ans = minDays(arr, m, k);
         if (ans == -1)
             System.out.println("We cannot make m bouquets.");
         else
