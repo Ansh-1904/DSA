@@ -1,3 +1,6 @@
+
+
+
 import java.util.*;
 public class findRowWithMaxNumOfOnes
 {
@@ -42,11 +45,13 @@ public class findRowWithMaxNumOfOnes
 
     public static void main(String[] args) {
         ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
-        matrix.add(new ArrayList<>(Arrays.asList(1, 1, 1)));
-        matrix.add(new ArrayList<>(Arrays.asList(0, 0, 1)));
-        matrix.add(new ArrayList<>(Arrays.asList(0, 0, 0)));
+        matrix.add(new ArrayList<>(Arrays.asList(0,0,1,1,1)));
+        matrix.add(new ArrayList<>(Arrays.asList(0,0,0,0,0)));
+        matrix.add(new ArrayList<>(Arrays.asList(0,1,1,1,1)));
+        matrix.add(new ArrayList<>(Arrays.asList(0,0,0,0,0)));
+        matrix.add(new ArrayList<>(Arrays.asList(0,1,1,1,1)));
 
-        int n = 3, m = 3;
+        int n = 5, m = 5;
         System.out.println("The row with the maximum number of 1's is: " +
         maximumOnesRow(matrix, n, m)+"th Row");
     }
