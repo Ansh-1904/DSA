@@ -17,7 +17,7 @@ class singleElemInSortedArr
         }
 
         int low=1;
-        int high=n-1;
+        int high=n-2;
         while(low<=high)
         {
             int mid=(low+high)/2;
