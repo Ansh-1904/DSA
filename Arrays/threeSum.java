@@ -1,28 +1,31 @@
+
+
+
 //better approach
 // import java.util.*;
 // class threeSum{
 
 //     public static List<List<Integer>> triplets(int arr[], int n)
 //     {
-//         Set<List<Integer>> st=new HashSet<>();
+        // Set<List<Integer>> st=new HashSet<>();
 
-//         for(int i=0;i<n;i++)
-//         {
-//             Set<Integer> hashset=new HashSet<>();
-//             for(int j=i+1;j<n;j++)
-//             {
-//                 int third=-(arr[i]+arr[j]);
-//                 if(hashset.contains(third))
-//                 {
-//                     List<Integer> temp=Arrays.asList(arr[i],arr[j],third);
-//                     temp.sort(null);
-//                     st.add(temp);
-//                 }
-//                 hashset.add(arr[j]);
-//             }
-//         }
-//         List<List<Integer>> ans= new ArrayList<>(st);
-//         return ans;
+        // for(int i=0;i<n;i++)
+        // {
+        //     Set<Integer> hashset=new HashSet<>();
+        //     for(int j=i+1;j<n;j++)
+        //     {
+        //         int third=-(arr[i]+arr[j]);
+        //         if(hashset.contains(third))
+        //         {
+        //             List<Integer> temp=Arrays.asList(arr[i],arr[j],third);
+        //             temp.sort(null);
+        //             st.add(temp);
+        //         }
+        //         hashset.add(arr[j]);
+        //     }
+        // }
+        // List<List<Integer>> ans= new ArrayList<>(st);
+        // return ans;
 //     }
 
 //     public static void main(String[] args) {
