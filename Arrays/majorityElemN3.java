@@ -77,35 +77,35 @@ class majorityElemN3 {
 
 
 
-// //majority elem greater than N/3
-// //better force approach
+//majority elem greater than N/3
+//better force approach
 // import java.util.*;
 // class majorityElemN3 {
 
 //     public static List<Integer> majorityElem(int v[])
-//     {
-//         int n = v.length; //size of the array
-//         List<Integer> ls = new ArrayList<>(); // list of answers
-
-//         //declaring a map:
-//         HashMap<Integer, Integer> mpp = new HashMap<>();
-
-//         // least occurrence of the majority element:
-//         int mini = (n / 3) + 1;
-
-//         //storing the elements with its occurnce:
-//         for (int i = 0; i < n; i++) {
-//             int value = mpp.getOrDefault(v[i], 0);
-//             mpp.put(v[i], value + 1);
-
-//             //checking if v[i] is
-//             // the majority element:
-//             if (mpp.get(v[i]) == mini) {
-//                 ls.add(v[i]);
+//     int n=nums.length;
+//         List<Integer> ans=new ArrayList<>();
+//         Map<Integer,Integer> map=new HashMap<>();
+//         int mini=(n/3)+1;
+//         for(int i=0;i<n;i++)
+//         {
+//             if(map.containsKey(nums[i]))
+//             {
+//                 map.put(nums[i],map.get(nums[i])+1);
 //             }
-//             if (ls.size() == 2) break;
+//             else{
+//                 map.put(nums[i],1);
+//             }
+//             if(map.get(nums[i])==mini)
+//             {
+//                 ans.add(nums[i]);
+//             }
+//             if(ans.size()==2)
+//             {
+//                 break;
+//             }
 //         }
-//         return ls;
+//         return ans;
 //     }
 //     public static void main(String[] args) {
 //         // int[] arr={1,1,1,3,3,2,2,2};

@@ -25,8 +25,8 @@ class MaxProductSubarray {
 
     public static void main(String[] args) {
         MaxProductSubarray solution=new MaxProductSubarray();
-        // int nums[]={-2,3,4,-1,0,-2,3,1,4,0,4,6,-1,4};
-        int nums[]={2,3,-2,4};
+        int nums[]={-2,3,4,-1,0,-2,3,1,4,0,4,6,-1,4};
+        // int nums[]={2,3,-2,4};
         int ans=solution.maxProduct(nums);
         System.out.println(ans);
         
