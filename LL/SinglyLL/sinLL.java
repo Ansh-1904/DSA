@@ -87,6 +87,121 @@ public class sinLL {
         return head;
     }
 
+    private static Node deleteValue(Node head, int value)
+    {
+        if(head==null) return head;
+        if(value==head.data)
+        {
+            head=head.next;
+            return head;
+        }
+        Node temp=head;
+        Node prev=null;
+        while(temp!=null)
+        {
+            if(value==temp.data)
+            {
+                prev.next=prev.next.next;
+                break;
+            }
+            prev=temp;
+            temp=temp.next;
+        }
+        return head;
+    }
+
+    private static Node insertHead(Node head,int elem)
+    {
+        // Node temp=new Node(elem);
+        // temp.next=head;
+        // head=temp;
+        // return head;
+
+        //or //better way
+
+        Node temp=new Node(elem, head);
+        return temp;
+
+        //or
+        // return new Node(elem,head);
+    }
+
+    private static Node insertAtEnd(Node head, int elem)
+    {
+
+        if(head==null) return new Node(elem);
+        Node temp=head;
+        while(temp.next!=null)
+        {
+            temp=temp.next;
+        }
+        temp.next=new Node(elem);
+        return head;
+    }
+
+    private static Node insertK(Node head, int elem, int k)
+    {
+        if(head==null)
+        {
+            if(k==1)
+            {
+                return new Node(elem);
+            }
+            else{
+                return head;
+            }
+        }
+        if(k==1)
+        {
+            return new Node(elem,head);
+        }
+
+        int count=0;
+        Node temp=head;
+        while(temp!=null)
+        {
+            count++;
+            if(count==k-1)
+            {
+                Node newNode=new Node(elem);
+                newNode.next=temp.next;
+                temp.next=newNode;
+                break;
+            }
+            temp=temp.next;
+        }
+        return head;
+    }
+
+    private static Node insertElemBeforeX(Node head, int elem, int x)
+    {
+        if(head==null)
+        {
+            return head;
+        }
+        if(x==head.data)
+        {
+            return new Node(elem,head);
+        }
+
+        
+        Node temp=head;
+        Node prev=head;
+        while(temp!=null)
+        {
+            if(temp.data==x)
+            {
+                Node newNode=new Node(elem);
+                newNode.next=prev.next;
+                prev.next=newNode;
+                break;
+            }
+            prev=temp;
+            temp=temp.next;
+        }
+        return head;
+    }
+
     public static void main(String[] args) {
         int arr[]={2,4,6,8};
         // Node head=new Node(arr[2]);
@@ -108,9 +223,44 @@ public class sinLL {
 
         //delete kth position
 
+        // Node head=convertArrToLL(arr);
+        // head=deleteK(head,3);
+        // System.out.print("Linked List after deleting kth position: ");
+        // printLinkedList(head);
+
+        //delete node of given data value
+
+        // Node head=convertArrToLL(arr);
+        // head=deleteValue(head,6);
+        // System.out.print("Linked List after deleting node with giving value as data : ");
+        // printLinkedList(head);
+
+        //insert head
+
+        // Node head=convertArrToLL(arr);
+        // head=insertHead(head,5);
+        // System.out.print("Linked List after inserting new head : ");
+        // printLinkedList(head);
+        
+        //insert at the end
+
+        // Node head=convertArrToLL(arr);
+        // head=insertAtEnd(head,5);
+        // System.out.print("Linked List after inserting at the end : ");
+        // printLinkedList(head);
+
+        //insert at k with given elem
+
+        // Node head=convertArrToLL(arr);
+        // head=insertK(head,5,3);
+        // System.out.print("Linked List after inserting at k with given elem : ");
+        // printLinkedList(head);
+
+        //insert elem before xData
+
         Node head=convertArrToLL(arr);
-        head=deleteK(head,3);
-        System.out.print("Linked List after deleting kth position: ");
+        head=insertElemBeforeX(head,5,6);
+        System.out.print("Linked List after inserting at k with given elem : ");
         printLinkedList(head);
         
     }
